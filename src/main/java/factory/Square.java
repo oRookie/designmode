@@ -1,4 +1,8 @@
 package factory;
 
-public class Square {
+public class Square implements  Shape {
+    @Override
+    public void draw() {
+        System.out.println("IN Square draw method");
+    }
 }
