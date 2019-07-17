@@ -24,9 +24,7 @@ public class ChatThemeImpl implements ChatTheme {
 
     @Override
     public void notifyAllObserver() {
-        for (ObserverInterface o:observerList){
-           o.getMessage(message);
-        }
+        observerList.stream().forEach(o->o.getMessage(message));
     }
 
     //主题发送消息
